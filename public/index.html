@@ -1,0 +1,163 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"/>
+</head>
+<body>
+        <div class="row" id="header">
+            <div class="col-20"></div>
+            <div class="col-10"><a href="index.html"><img src="images/Logo.png" width="130%" class="logo"></a></div>
+            <div class="col-20"></div>
+            <div class="col-15"><a href="API.html" class="headers"><p class="link">API</p></a></div>
+            <div class="col-15"><a href="About.html" class="headers"><p class="link">О НАС</p></a></div>
+            <div class="col-20"></div>            
+        </div>
+        <div class="row" id="block"> 
+            <div class="col-20"></div>
+            <div class="col-15"><img src="images/LittleMap.png" width="100%"></div>
+            <div class="col-45"><p class="title">Добро пожаловать в <span style = "font-weight: 900"> travery!</span></p>
+            <p>Как часто вы думали когда приедет курьер и не могли ничего делать? Travery решает эту проблему. С помощью нашего телеграмм бота вы можете отслеживать своего курьера в режиме реального времени. </p>
+            </div>
+            <div class="col-20"></div>
+        </div> 
+        <div class="row">
+            <div class="col-45"></div>
+            <div class="col-10"><a href="https://t.me/traverybot" class="button">НАЧАТЬ</a></div>
+        </div>
+
+        <div class="row" id="block">
+                <div class="col-20"></div>
+                <div class="col-60"><img src="images/Courier.png" width="90%" class="img"></div>
+                <div class="col-20"></div>
+        </div>
+        <div class="row">
+                <div class="col-20"></div>
+                <div class="col-60"><p align = "center" class="title2"><< Немного о том как это работает >></p></div>
+                <div class="col-20"></div>
+        </div>
+        <div class="row">
+                <div class="col-20"></div>
+                <div class="col-60"><p align = "center" class="description">Вы заходите в наш бот и выбираете кто вы "Курьер" или "Пользователь". Для курьеров мы выдаем уникальный идентификатор, который они говорят вам. Вы вводите этот идентификатор и получаете его геопозицию в реальном времени.</p></div>
+                <div class="col-20"></div>
+        </div>
+        <div class="row" id="block">
+                <div class="col-20"></div>
+                <div class="col-60"><p align = "center" class="title2"><< Статистика по скорости доставки >><p></div>
+                <div class="col-20"></div>
+        </div>
+    </br>
+
+        <div class="row"    >
+                <div class="col-20"></div>
+                <div class="col-60"><canvas id="myChart" width="200" height="100"></canvas>
+                    <script>
+                    var ctx = document.getElementById("myChart").getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ["Stolik", "Chopar", "MyTaxi",],
+                            datasets: [{
+                                data: [15, 22, 20],
+                                backgroundColor: [
+                                    '#28ce89',
+                                    '#1ea06a',
+                                    '#29b9b7',
+                                ],
+                            }]
+                        },
+                        options: {
+                            legend:{
+                                display:false,
+                            },
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero:true
+                                    }
+                                }]
+                            }
+                        }
+                    });
+                    </script></div>
+                <div class="col-20"></div>
+        </div>
+
+
+
+        <div class="row" >
+                <div class="col-20"></div>
+                <div class="col-60"><p align = "center" class="title2"><< Статистика по кол-ву заказов в зависимости от времени >><p></div>
+                <div class="col-20"></div>
+        </div>
+
+    </br>
+        <div class="row" >
+                <div class="col-20"></div>
+                <div class="col-60"><canvas id="myChart2" width="200" height="100"></canvas>
+                    <script>
+                    var ctx2 = document.getElementById("myChart2").getContext('2d');
+                    var myChart = new Chart(ctx2, {
+                        type: 'line',
+                        data: {
+                            labels: ["6:00", "9:00", "12:00","15:00", "18:00", "21:00","00:00", "3:00",],
+                            datasets: [{
+                                data: [4, 7, 16,10,17,5,2,1],
+                                backgroundColor: [
+                                    '#28ce89',
+                                ],
+                            }]
+                        },
+                        options: {
+                            legend:{
+                                display:false,
+                            },
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero:true
+                                    }
+                                }]
+                            }
+                        }
+                    });
+                    </script></div>
+                <div class="col-20"></div>
+        </div>
+
+    </br>
+</br>
+</br>
+</br>
+</br>
+
+        <div id="footer">
+                <div class="row" id="contacts">
+                        <div class="colf-30"></div>
+                        <div class="colf-40"><p align="left" class="contacts">КОНТАКТЫ</div>
+                        <div class="colf-30"></div> 
+                </div>
+        <div class="row" id="footer">
+                <div class="colf-20"></div>
+                <div class="colf-10"><img src = "images/mail.png" width="20%" class="icons"></div>
+                <div class="colf-50"><p class="footer1">traverysupport@snt.com</p></div>
+                <div class="colf-20"></div> 
+        </div>
+         <div class="row" id="footer">
+                <div class="colf-20"></div>
+                <div class="colf-10"><img src = "images/mobile.png" width="20%" class="icons"></div>
+                <div class="colf-50"><p class="footer1">+998 93 562 07 45</br>+998 90 175 48 91</p></div>
+                <div class="colf-20"></div> 
+        </div>
+            <div class="row" id="footer">
+                <div class="colf-20"></div>
+                <div class="colf-10"><img src = "images/tg.png" width="20%" class="icons"></div>
+                <div class="colf-50"><p class="footer1">@travery</p></div>
+                <div class="colf-20"></div>
+        </div>
+    </div>
+</body>
+</html>
