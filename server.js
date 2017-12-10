@@ -13,7 +13,6 @@ MongoClient.connect(db.url, (err, database) => {
     if(err) throw err;
     require('./app/routes') (app, database);
     app.listen(PORT, () => {
-        app.use(express.static('./public'));
         console.log(`We are live on ${PORT}`);
     })
 });
