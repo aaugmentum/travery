@@ -6,6 +6,8 @@ const bodyParaser   = require('body-parser');
 const app           = express();
 app.use(bodyParaser.json());
 
+app.use(express.static('./public'))
+
 const PORT = process.env.port || 8080;
 MongoClient.connect(db.url, (err, database) => {
     if(err) throw err;
